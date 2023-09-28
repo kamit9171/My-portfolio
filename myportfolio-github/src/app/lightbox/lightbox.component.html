@@ -1,0 +1,6 @@
+<div class="lightbox-container">
+    <div class="lightbox-content" [class.zoomed]="isZoomed" (click)="toggleZoom()">
+        <img [src]="'assets/certificates/' + imageName" alt="Certificate Image" [class.zoomed-image]="isZoomed">
+        <button (click)="closeLightbox()">Close</button>
+    </div>
+</div>

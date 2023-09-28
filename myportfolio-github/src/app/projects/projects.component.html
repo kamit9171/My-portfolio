@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>Projects</h1>
+
+    <section *ngFor="let project of projects">
+        <h2 class="project-title">
+            <i class="fas fa-code"></i> {{ project.title }}
+            <span class="project-links">
+                <a href="{{ project.githubLink }}" target="_blank"><i class="fab fa-github "></i></a>
+                <a href="{{ project.projectLink }}" target="_blank"><i class="fas fa-external-link-alt "></i></a>
+            </span>
+        </h2>
+
+        <h3>
+            <span>Technologies: </span>
+            <span>{{ project.technologies }}</span>
+        </h3>
+
+        <ul *ngFor="let desc of project.description">
+            <li>{{ desc }}</li>
+        </ul>
+    </section>
+</div>

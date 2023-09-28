@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Certificate</h1>
+    <section class="certificate-grid" *ngFor="let cert of certificate">
+        <h2>{{ cert.name }}</h2>
+        <div class="certificate-item">
+            <img [src]="'assets/certificates/' + cert.imageName" alt="Certificate Image" width="200" height="200">
+            <p>
+                <a [routerLink]="['/certificate', cert.imageName]">
+                    <i class="fa-solid fa-id-card-clip"></i><!-- Replace with your desired certificate icon -->
+                </a>
+
+        </div>
+    </section>
+</div>
